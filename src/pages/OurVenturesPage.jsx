@@ -28,19 +28,21 @@ export default function OurVenturesPage() {
 
       <section className="container section-space split-layout">
         <div className="reveal">
-          <div className="telecom-future-shell">
+          <div className="telecom-future-shell ventures-thesis-panel">
             <SectionTitle title="Venture Thesis" />
             <p>{t(venturesMeta.thesis)}</p>
+            <ul className="checklist telecom-checklist">
+              {venturesMeta.thesisPoints.map((item) => (
+                <li key={item}>{t(item)}</li>
+              ))}
+            </ul>
           </div>
         </div>
-        {/* <div className="stats-row ventures-kpi-row reveal" style={{ animationDelay: '120ms' }}>
-          {venturesMeta.metrics.map((metric) => (
-            <div className="stat-item ventures-kpi-item" key={metric.label}>
-              <strong>{t(metric.value)}</strong>
-              <span>{t(metric.label)}</span>
-            </div>
-          ))}
-        </div> */}
+        <div className="reveal ventures-thesis-media-wrap" style={{ animationDelay: '120ms' }}>
+          <figure className="ventures-thesis-media telecom-phase-media">
+            <img src={venturesMeta.thesisImage} alt={t('Venture Thesis')} loading="lazy" />
+          </figure>
+        </div>
       </section>
 
       <section className="container section-space">

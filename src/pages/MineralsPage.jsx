@@ -21,26 +21,24 @@ export default function MineralsPage() {
         </div>
       </section>
 
-      <section className="container section-space reveal">
-        <div className="telecom-phase-stack">
-          <article className="telecom-phase-item telecom-phase-item-with-media">
-            <div className="telecom-phase-main">
-              <div className="telecom-phase-head">
-                <h3>{t(mineralsContent.focusAreas.title)}</h3>
-              </div>
-              <ul className="checklist telecom-checklist">
-                {mineralsContent.focusAreas.points.map((item) => (
-                  <li key={item}>{t(item)}</li>
-                ))}
-              </ul>
-            </div>
-            {mineralsContent.focusAreas.image && (
-              <figure className="telecom-phase-media">
-                <img src={mineralsContent.focusAreas.image} alt={t(mineralsContent.focusAreas.title)} loading="lazy" />
-              </figure>
-            )}
-          </article>
+      <section className="container section-space split-layout mining-focus-layout">
+        <div className="reveal">
+          <div className="telecom-future-shell mining-focus-panel">
+            <SectionTitle title={mineralsContent.focusAreas.title} />
+            <ul className="checklist telecom-checklist">
+              {mineralsContent.focusAreas.points.map((item) => (
+                <li key={item}>{t(item)}</li>
+              ))}
+            </ul>
+          </div>
         </div>
+        {mineralsContent.focusAreas.image && (
+          <div className="reveal mining-focus-media-wrap" style={{ animationDelay: '120ms' }}>
+            <figure className="telecom-phase-media mining-focus-media">
+              <img src={mineralsContent.focusAreas.image} alt={t(mineralsContent.focusAreas.title)} loading="lazy" />
+            </figure>
+          </div>
+        )}
       </section>
 
       <section className="container section-space split-layout">

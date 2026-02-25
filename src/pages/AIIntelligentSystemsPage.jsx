@@ -95,9 +95,9 @@ export default function AIIntelligentSystemsPage() {
         </div>
       </section>
 
-      <section className="container section-space split-layout">
+      <section className="container section-space split-layout digital-governance-layout">
         <div className="reveal">
-          <div className="telecom-future-shell">
+          <div className="telecom-future-shell digital-governance-panel">
             <SectionTitle title={aiIntelligentSystemsContent.governance.title} subtitle={aiIntelligentSystemsContent.governance.intro} />
             <ul className="checklist telecom-checklist">
               {aiIntelligentSystemsContent.governance.points.map((item) => (
@@ -107,6 +107,13 @@ export default function AIIntelligentSystemsPage() {
             <p>{t(aiIntelligentSystemsContent.governance.close)}</p>
           </div>
         </div>
+        {aiIntelligentSystemsContent.governance.image && (
+          <div className="reveal digital-governance-media-wrap" style={{ animationDelay: '120ms' }}>
+            <figure className="telecom-phase-media digital-governance-media">
+              <img src={aiIntelligentSystemsContent.governance.image} alt={t(aiIntelligentSystemsContent.governance.title)} loading="lazy" />
+            </figure>
+          </div>
+        )}
       </section>
 
       <section className="container section-space reveal">

@@ -23,26 +23,24 @@ export default function MarketingDigitalServicesPage() {
         </div>
       </section>
 
-      <section className="container section-space reveal">
-        <div className="telecom-phase-stack">
-          <article className="telecom-phase-item telecom-phase-item-with-media">
-            <div className="telecom-phase-main">
-              <div className="telecom-phase-head">
-                <h3>{t('Ecosystem Categories')}</h3>
-              </div>
-              <ul className="checklist telecom-checklist">
-                {marketingDigitalServicesContent.categories.map((item) => (
-                  <li key={item}>{t(item)}</li>
-                ))}
-              </ul>
-            </div>
-            {marketingDigitalServicesContent.categoriesImage && (
-              <figure className="telecom-phase-media">
-                <img src={marketingDigitalServicesContent.categoriesImage} alt={t('Ecosystem Categories')} loading="lazy" />
-              </figure>
-            )}
-          </article>
+      <section className="container section-space split-layout ecosystem-categories-layout">
+        <div className="reveal">
+          <div className="telecom-future-shell ecosystem-categories-panel">
+            <SectionTitle title="Ecosystem Categories" />
+            <ul className="checklist telecom-checklist">
+              {marketingDigitalServicesContent.categories.map((item) => (
+                <li key={item}>{t(item)}</li>
+              ))}
+            </ul>
+          </div>
         </div>
+        {marketingDigitalServicesContent.categoriesImage && (
+          <div className="reveal ecosystem-categories-media-wrap" style={{ animationDelay: '120ms' }}>
+            <figure className="telecom-phase-media ecosystem-categories-media">
+              <img src={marketingDigitalServicesContent.categoriesImage} alt={t('Ecosystem Categories')} loading="lazy" />
+            </figure>
+          </div>
+        )}
       </section>
 
       <section className="container section-space split-layout">

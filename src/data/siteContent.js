@@ -416,11 +416,11 @@ export const contactExtra = {
   offices: [
     {
       title: 'Operations Office',
-      text: 'support@fineoreventures.com',
+      text: 'Support@fineoreventures.com',
     },
     {
       title: 'Business Inquiries',
-      text: 'Info@fineoreventuress.com',
+      text: 'Info@fineoreventures.com',
     },
     {
       title: 'Patrner Support',
@@ -571,6 +571,19 @@ export const venturesOverview = [
 export const venturesMeta = {
   thesis:
     'Our venture model combines asset-backed operations with scalable technology and service verticals, creating balanced growth across resources, infrastructure, AI, and digital capability.',
+  thesisImage: '/assets/naturalresources/venturethesis.avif',
+  thesisPoints: [
+    'Asset-backed ventures integrated with technology-led performance systems',
+    'Capital discipline linked to phased execution and measurable outcomes',
+    'Cross-sector diversification across resources, telecom, digital, and AI',
+    'Institutional governance architecture for confidence and transparency',
+    'Long-horizon value creation aligned with national priorities',
+    'Execution playbooks standardized across ventures for repeatable scale',
+    'Partner ecosystem alignment anchored to delivery accountability metrics',
+    'Operational resilience frameworks built for volatility and continuity',
+    'Data-driven steering cadence supporting faster strategic course correction',
+    'Compliance-first expansion model reducing regulatory and execution risk',
+  ],
   pillars: [
     {
       title: 'Operational Depth',
@@ -761,6 +774,7 @@ export const aiIntelligentSystemsContent = {
   governance: {
     title: 'AI Governance & Assurance',
     intro: 'AI deployment is governed through structured controls to ensure trust, compliance, and executive accountability.',
+    image: '/assets/telecommunications/aigovernanceandinsurance.jpg',
     points: [
       'Model governance with approval gates, ownership, and audit trails',
       'Data lineage controls from source ingestion to executive reporting outputs',
@@ -968,7 +982,7 @@ export const marketingDigitalServicesContent = {
     ],
     close: 'Ecosystem assembly is treated as operating infrastructure, not vendor marketing.',
   },
-  image: '/assets/ventures/marketing-media.jpg',
+  image: '/assets/ecosystempatnerships/heroimage.avif',
 };
 
 export const mineralsContentExtra = {

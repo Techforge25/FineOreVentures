@@ -49,7 +49,7 @@ export default function TelecommunicationsPage() {
         </div>
       </section>
 
-      <section className="container section-space reveal">
+      {/* <section className="container section-space reveal">
         <div className="telecom-controls-wrap">
           <SectionTitle title={telecommunicationsContent.controls.title} subtitle={telecommunicationsContent.controls.intro} />
           <div className="telecom-controls-grid">
@@ -68,7 +68,7 @@ export default function TelecommunicationsPage() {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="container section-space reveal">
         <div className="telecom-future-shell">
