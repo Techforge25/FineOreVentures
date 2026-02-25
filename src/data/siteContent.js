@@ -14,7 +14,7 @@ export const navLinks = [
     ],
   },
   { label: 'Projects', to: '/projects' },
-  { label: 'Engage Us', to: '/contact-us' },
+  { label: 'Contact Us', to: '/contact-us' },
 ];
 
 export const homeContent = {
@@ -347,7 +347,7 @@ export const csrContent = {
 };
 
 export const contactContent = {
-  title: 'Engage Us',
+  title: 'Contact Us',
   description:
     'For business inquiries, sovereign partnerships, and strategic engagements, contact our team at info@fineoreventures.com.',
   fields: ['Name', 'Email', 'Message'],

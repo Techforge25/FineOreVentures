@@ -9,7 +9,7 @@ const frExact = {
   'Ecosystem Partners': "Partenaires d'Ecosysteme",
   Governance: 'Gouvernance',
   Projects: 'Projets',
-  'Engage Us': 'Contactez-Nous',
+  'Contact Us': 'Contactez-Nous',
   'Contact Us': 'Contact',
   'Mining & Minerals': 'Mines et Mineraux',
   'Gold & Diamonds': 'Or et Diamants',
