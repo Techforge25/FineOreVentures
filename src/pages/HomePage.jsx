@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="home-page home-rebuild-page">
       <section className="home-hero">
-        <video src={homeContent.heroMedia.video} autoPlay muted loop playsInline />
+        <video src={homeContent.heroMedia.video} autoPlay muted loop playsInline preload="metadata" />
         <div className="home-hero-overlay" />
 
         <div className="container home-hero-content">
@@ -36,10 +36,10 @@ export default function HomePage() {
 
       <section className="container section-space home-partners-section">
         <SectionTitle title="Our KBM Partners" subtitle="Core execution partners supporting equipment, field operations, and delivery reliability." />
-        <div className="kdm-partners-grid reveal" aria-label="KBM Partners">
-          {homeContent.kdmPartners.map((partner, index) => (
-            <article className="kdm-partner-card" key={partner.name} style={{ animationDelay: `${index * 80}ms` }}>
-              <span className="kdm-partner-index">{String(index + 1).padStart(2, '0')}</span>
+        <div className="kdm-carousel reveal" aria-label="KBM Partners">
+          <div className="kdm-track">
+            {[...homeContent.kdmPartners, ...homeContent.kdmPartners].map((partner, index) => (
+              <article className="kdm-partner-card" key={`${partner.name}-${index}`}>
               <div className="kdm-partner-logo-wrap">
                 <img
                   src={partner.logo}
@@ -49,7 +49,8 @@ export default function HomePage() {
                 />
               </div>
             </article>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

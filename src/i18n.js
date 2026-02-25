@@ -3,13 +3,15 @@ const frExact = {
   'About Us': 'A Propos',
   'Our Platform': 'Notre Plateforme',
   'Our Ventures': 'Nos Activites',
+  'Fine Ore Ventures': 'Fine Ore Ventures',
+  'Engage Us': 'Contactez-Nous',
+  'Engage With Us': 'Engagez Avec Nous',
   'Natural Resources': 'Ressources Naturelles',
   'Digital Systems': 'Systemes Numeriques',
   'Investment & Structuring': 'Investissement et Structuration',
   'Ecosystem Partners': "Partenaires d'Ecosysteme",
   Governance: 'Gouvernance',
   Projects: 'Projets',
-  'Contact Us': 'Contactez-Nous',
   'Contact Us': 'Contact',
   'Mining & Minerals': 'Mines et Mineraux',
   'Gold & Diamonds': 'Or et Diamants',
@@ -65,6 +67,10 @@ const frExact = {
   '(c)': '(c)',
   'All rights reserved.': 'Tous droits reserves.',
 };
+
+const frExactLower = Object.fromEntries(
+  Object.entries(frExact).map(([k, v]) => [k.toLowerCase(), v])
+);
 
 const frWords = {
   the: 'le',
@@ -368,14 +374,35 @@ function roughFrench(text) {
   return text.replace(/\b[A-Za-z][A-Za-z'-]*\b/g, (word) => {
     const key = word.toLowerCase();
     const translated = frWords[key];
-    if (!translated) return word;
-    return preserveCase(word, translated);
+    if (translated) return preserveCase(word, translated);
+
+    // Translate composite words such as AI-Assisted or Gov-Ready.
+    if (word.includes('-') || word.includes('/')) {
+      const delim = word.includes('-') ? '-' : '/';
+      const parts = word.split(delim);
+      const mapped = parts.map((part) => {
+        const partTranslated = frWords[part.toLowerCase()];
+        return partTranslated ? preserveCase(part, partTranslated) : part;
+      });
+      const candidate = mapped.join(delim);
+      if (candidate !== word) return candidate;
+    }
+
+    return word;
   });
 }
 
 export function translate(text, language = 'en') {
   if (language !== 'fr' || typeof text !== 'string') return text;
   if (!text.trim()) return text;
+
   if (frExact[text]) return frExact[text];
+
+  const normalized = text.replace(/\s+/g, ' ').trim();
+  if (frExact[normalized]) return frExact[normalized];
+
+  const lower = normalized.toLowerCase();
+  if (frExactLower[lower]) return frExactLower[lower];
+
   return roughFrench(text);
 }

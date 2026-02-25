@@ -1,0 +1,1 @@
+import{u as c,j as s}from"./index-hWL10xJy.js";function o({pretitle:a,title:r,description:n}){const{t:e}=c();return s.jsx("section",{className:"page-hero",children:s.jsxs("div",{className:"container",children:[a&&s.jsx("span",{className:"pretitle",children:e(a)}),s.jsx("h1",{children:e(r)}),n&&s.jsx("p",{children:e(n)})]})})}export{o as P};

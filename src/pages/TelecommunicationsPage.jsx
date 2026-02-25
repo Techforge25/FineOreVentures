@@ -108,7 +108,7 @@ export default function TelecommunicationsPage() {
           <p>{t(telecommunicationsContent.ecosystemAssembly.intro)}</p>
           <p>{t(telecommunicationsContent.ecosystemAssembly.close)}</p>
         </div>
-        <div className="reveal" style={{ animationDelay: '120ms' }}>
+        <div className="reveal engagement-model-panel" style={{ animationDelay: '120ms' }}>
           <SectionTitle title={telecommunicationsContent.engagementModel.title} />
           <ul className="checklist">
             {telecommunicationsContent.engagementModel.points.map((item) => (

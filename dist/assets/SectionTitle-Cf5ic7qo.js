@@ -1,0 +1,1 @@
+import{u as i,j as s}from"./index-hWL10xJy.js";function c({title:t,subtitle:e}){const{t:n}=i();return s.jsxs("div",{className:"section-title",children:[s.jsx("h2",{children:n(t)}),e&&s.jsx("p",{children:n(e)})]})}export{c as S};
