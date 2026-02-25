@@ -35,7 +35,7 @@ export default function HomePage() {
       </section>
 
       <section className="container section-space home-partners-section">
-        <SectionTitle title="Our KDM Partners" subtitle="Core execution partners supporting equipment, field operations, and delivery reliability." />
+        <SectionTitle title="Our KBM Partners" subtitle="Core execution partners supporting equipment, field operations, and delivery reliability." />
         <div className="kdm-partners-grid reveal" aria-label="KBM Partners">
           {homeContent.kdmPartners.map((partner, index) => (
             <article className="kdm-partner-card" key={partner.name} style={{ animationDelay: `${index * 80}ms` }}>

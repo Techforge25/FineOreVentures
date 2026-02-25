@@ -53,7 +53,7 @@ const frExact = {
   'Send Us a Message': 'Envoyez-nous un message',
   'Fill this form and our team will connect with you soon.': 'Remplissez ce formulaire et notre equipe vous contactera rapidement.',
   'Closing Statement': 'Declaration Finale',
-  'Our KDM Partners': 'Nos Partenaires KDM',
+  'Our KBM Partners': 'Nos Partenaires KBM',
   'Core execution partners supporting equipment, field operations, and delivery reliability.':
     'Partenaires d execution soutenant les equipements, les operations terrain et la fiabilite de livraison.',
   'Our Partners': 'Nos Partenaires',

@@ -416,15 +416,15 @@ export const contactExtra = {
   offices: [
     {
       title: 'Operations Office',
-      text: 'support@FineOreVentures.com',
+      text: 'support@fineoreventures.com',
     },
     {
       title: 'Business Inquiries',
-      text: 'Info@FineOreVenturess.com',
+      text: 'Info@fineoreventuress.com',
     },
     {
       title: 'Patrner Support',
-      text: 'Partners@FineOreVentures.com',
+      text: 'Partners@fineoreventures.com',
     },
     {
       title: 'Support Window',
